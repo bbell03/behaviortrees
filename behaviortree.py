@@ -30,13 +30,18 @@ def battery_check(blackboard):
 def go_home(blackboard):
     print "Finding docking station to charge"
     # Once charged:
+    blackboard.BATTERY_LEVEL = 100
     print "Fully charged and ready to begin cleaning"
     cleaning_function(blackboard)
     return;
 
 # Cleaning Functions: Caroline
 def cleaning_function(blackboard):
-    print "Beginning cleaning function"
+    print "Checking for cleaning"
+    if blackboard.SPOT == False and blackboard.GENERAL == False:
+        print "No cleaning command requested"
+    else:
+        print "A clean has been requested"
     return;
 
 # Spot Check: Both
@@ -44,10 +49,14 @@ def spot_check(blackboard):
     return;
 
 # Tests
+print "TEST ONE: Full battery, no commands"
 batt_full = blackboard(100, False, False, False, 0)
-batt_30 = blackboard(30, False, False, False, 0)
-batt_low = blackboard(10, False, False, False, 0)
-
 battery_check(batt_full)
+
+print "TEST TWO: 30% battery, no commands"
+batt_30 = blackboard(30, False, False, False, 0)
 battery_check(batt_30)
+
+print "TEST THREE: Low battery, no commands"
+batt_low = blackboard(10, False, False, False, 0)
 battery_check(batt_low)
