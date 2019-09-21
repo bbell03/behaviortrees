@@ -61,8 +61,8 @@ def cleaning_function(blackboard):
         print "A clean has been requested"
         if blackboard.SPOT == True:
             print "A spot check has been requested"
+            # Spot cleaning: 20 second intensive
             spot_check(blackboard, 20)
-            # Done spot
             print "Spot check completed: spot is " + str(blackboard.SPOT)
         print "Beginning general clean"
         # while loop for repetitive clean
@@ -73,8 +73,8 @@ def cleaning_function(blackboard):
                 print "Battery level " +  str(blackboard.BATTERY_LEVEL) + "% sufficient"
             if blackboard.DUSTY_SPOT == True:
                 print "Dusty spot detected"
+                # Dusty spot: 35 second intensive
                 spot_check(blackboard, 35)
-                # Done intensive
                 print "Intensive cleaning completed: Dusty spot " + str(blackboard.DUSTY_SPOT)
             if blackboard.DUSTY_SPOT == False:
                 # Done general
@@ -84,6 +84,9 @@ def cleaning_function(blackboard):
 
 # Spot Check: Both
 def spot_check(blackboard, secs):
+    print "Running spot check: " + str(secs) + " seconds"
+    sys.stdout.flush()
+    time.sleep(secs)
     if secs == 20:
         blackboard.SPOT = False
     else:
