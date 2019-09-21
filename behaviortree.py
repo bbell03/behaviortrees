@@ -2,11 +2,18 @@
 
 # Blackboard: Brandon, Caroline has started for testing
 class blackboard:
-    BATTERY_LEVEL = 100
+    BATTERY_LEVEL = 0
     SPOT = False
     GENERAL = False
     DUSTY_SPOT = False
     HOME_PATH = 0
+
+    def __init__(self, b_val, s_val, g_val, d_val, h_val):
+        self.BATTERY_LEVEL = b_val
+        self.SPOT = s_val
+        self.GENERAL = g_val
+        self.DUSTY_SPOT = d_val
+        self.HOME_PATH = h_val
 
 # Battery Functions: Caroline
 def battery_check(blackboard):
@@ -35,3 +42,12 @@ def cleaning_function(blackboard):
 # Spot Check: Both
 def spot_check(blackboard):
     return;
+
+# Tests
+batt_full = blackboard(100, False, False, False, 0)
+batt_30 = blackboard(30, False, False, False, 0)
+batt_low = blackboard(10, False, False, False, 0)
+
+battery_check(batt_full)
+battery_check(batt_30)
+battery_check(batt_low)
