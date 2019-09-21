@@ -44,8 +44,8 @@ def battery_charge(blackboard):
 # Go Home: Brandon
 def go_home(blackboard):
     print "Finding docking station to charge"
-    # Once charged:
-    blackboard.BATTERY_LEVEL = 100
+    # Once home
+    battery_charge(blackboard)
     print "Ready to begin cleaning"
     return;
 
@@ -81,7 +81,7 @@ def spot_check(blackboard):
 
 
 # Tests
-#
+
 # print "TEST ONE: Full battery, no commands"
 # b_one = blackboard(100, False, False, False, 0)
 # battery_check(b_one)
@@ -125,7 +125,7 @@ def spot_check(blackboard):
 # print "\nTEST ELEVEN: 10% battery, general / spot / dusty commands, no recharge for battery before clean"
 # b_eleven = blackboard(10, True, True, True, 0)
 # cleaning_function(b_eleven)
-
-print "\nTEST TWELVE: 10% battery, recharging"
-b_twelve = blackboard(10, True, True, True, 0)
-battery_charge(b_twelve)
+#
+# print "\nTEST TWELVE: 10% battery, recharging"
+# b_twelve = blackboard(10, True, True, True, 0)
+# battery_charge(b_twelve)
