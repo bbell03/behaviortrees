@@ -80,6 +80,7 @@ def cleaning_function(blackboard):
                 # Done general
                 complete(blackboard)
         print "General clean completed"
+        print "Battery at " + str(blackboard.BATTERY_LEVEL)
     return;
 
 # Spot Check: Both
@@ -91,10 +92,15 @@ def spot_check(blackboard, secs):
         blackboard.SPOT = False
     else:
         blackboard.DUSTY_SPOT = False
+    battery_deplete(blackboard, secs)
     return;
 
 def complete(blackboard):
     blackboard.GENERAL = False
+    return;
+
+def battery_deplete(blackboard, val):
+    blackboard.BATTERY_LEVEL = blackboard.BATTERY_LEVEL - val
     return;
 
 # Tests
