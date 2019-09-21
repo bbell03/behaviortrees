@@ -16,7 +16,6 @@ class blackboard:
         self.HOME_PATH = h_val
 
 # Battery Functions: Caroline
-# COMPLETE
 def battery_check(blackboard):
     print "Battery level is " + str(blackboard.BATTERY_LEVEL)
     if blackboard.BATTERY_LEVEL < 30:
@@ -65,6 +64,7 @@ def cleaning_function(blackboard):
 def spot_check(blackboard):
     return;
 
+
 # Tests
 
 print "TEST ONE: Full battery, no commands"
@@ -102,7 +102,6 @@ battery_check(batt_eight)
 print "\nTEST NINE: 10% battery, both general and spot commands"
 batt_nine = blackboard(10, True, True, False, 0)
 battery_check(batt_nine)
-
 
 print "\nTEST TEN: 10% battery, general / spot / dusty commands"
 batt_ten = blackboard(10, True, True, True, 0)
