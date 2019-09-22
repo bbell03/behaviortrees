@@ -1,5 +1,5 @@
 # behaviortrees
-###### COMP 131: Artificial Intelligence
+###### COMP 131: Artificial Intelligence Tufts University
 ###### Homework 1: Behavior Trees
 
 
