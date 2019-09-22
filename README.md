@@ -11,9 +11,9 @@
 
 ### CODE DETAILS
 
-	#### IMPLEMENTATION
+	IMPLEMENTATION
 
 		We expect that our solution has been completely and correctly
 		implemented.
 
-	#### ARCHITECTURE:
+	ARCHITECTURE:
