@@ -5,12 +5,16 @@
 
 
 # README
+
 ## Assignment: HW4
+
 ###Author(s): Caroline Vanderlee and Brandon Bell
 
 
-###CODE DETAILS:
-	####IMPLEMENTATION:
+###CODE DETAILS
+
+	####IMPLEMENTATION
+  
 		We expect that our solution has been completely and correctly
 		implemented.
 
