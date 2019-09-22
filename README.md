@@ -6,8 +6,6 @@
 
 # README
 
-## Assignment: HW4
-
 ### Author(s): Caroline Vanderlee and Brandon Bell
 
 
