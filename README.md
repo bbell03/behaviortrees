@@ -17,3 +17,8 @@
 		implemented.
 
 	ARCHITECTURE:
+
+    Our solution makes use of modularity and object oriented design in order to program various functions on a Roomba.
+
+    Functions Implemented Include:
+      
