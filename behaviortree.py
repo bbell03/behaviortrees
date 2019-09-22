@@ -3,6 +3,7 @@
 import time
 import sys
 
+
 # Blackboard
 class blackboard:
     BATTERY_LEVEL = 0
@@ -54,40 +55,38 @@ def battery_charge(blackboard):
 
 # Cleaning Function
 def cleaning_function(blackboard):
+
+    # Complete if there is nothing to clean
     if blackboard.SPOT == False and blackboard.GENERAL == False:
         print "SUCCEEDED"
     else:
-        # Run spot check first
+        # Run spot check first: 20 second intensive
         if blackboard.SPOT == True:
-            # Spot cleaning: 20 second intensive
             spot_check(blackboard, 20)
             print "SUCCEEDED"
 
-        # General clean runs after spot clean; while loop for repetition
+        # General clean runs after spot check; while-loop for repetition
         while blackboard.GENERAL == True:
             # Manually check battery level and charge if needed
             if blackboard.BATTERY_LEVEL < 30:
                 go_home(blackboard)
-            # Check for dusty spot
+            # Check for dusty spot: 35 second intensive
             if blackboard.DUSTY_SPOT == True:
-                # Dusty spot: 35 second intensive
                 spot_check(blackboard, 35)
-            # Check if everything is clean
+            # Check if everything is clean: done with general cleaning if so
             if blackboard.DUSTY_SPOT == False:
-                # Done with general cleaning
                 complete(blackboard)
                 print "SUCCEEDED"
-        # End while loop
+
     return;
 
 
 # Spot Check
 def spot_check(blackboard, secs):
+    # 20 seconds for normal spot check, else 35 seconds for dusty spot
     print "RUNNING"
-    # Delay: flush printed output
     sys.stdout.flush()
     time.sleep(secs)
-    # 20 seconds for normal spot check, else 35 seconds for dusty spot
     if secs == 20:
         blackboard.SPOT = False
     else:
