@@ -53,11 +53,17 @@ def battery_charge(blackboard):
 
 # Go Home: Brandon
 def go_home(blackboard):
-    print "Finding docking station to charge"
-    # Once home: charge
-    battery_charge(blackboard)
-    print "Ready to begin cleaning"
-    return;
+    print "Go Home Start"
+    if blackboard.HOME_PATH:
+        print "Navigating to home location at" + blackboard.HOME_PATH
+        dock(blackboard)
+
+
+# Dock: Brandon
+def dock(blackboard):
+        battery_charge(blackboard)
+        battery_check(blackboard)
+        return;
 
 
 # Cleaning Function: Caroline
