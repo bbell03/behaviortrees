@@ -55,7 +55,7 @@ def battery_charge(blackboard):
 def go_home(blackboard):
     print "Go Home Start"
     if blackboard.HOME_PATH:
-        print "Navigating to home location at" + blackboard.HOME_PATH
+        print "Navigating to home location at " + str(blackboard.HOME_PATH)
         dock(blackboard)
     return;
 
