@@ -62,7 +62,6 @@ def go_home(blackboard):
 # Dock: Brandon
 def dock(blackboard):
         battery_charge(blackboard)
-        battery_check(blackboard)
         return;
 
 
