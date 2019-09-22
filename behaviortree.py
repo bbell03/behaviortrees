@@ -162,6 +162,11 @@ def complete(blackboard):
 # print "\nTEST THIRTEEN: 30% battery, general / spot / dusty commands"
 # b_thirteen = blackboard(30, True, True, True, 1)
 # battery_check(b_thirteen)
-#
 
-# User Input
+### MAIN FLOW OF CONTROL ###
+
+# User Input: get inputs for battery?, spot, general, is the room dusty?
+b_user = blackboard(100, True, True, True, 1) # replace values with user input
+
+# Battery check will launch the whole program
+battery_check(b_user)
