@@ -1,21 +1,21 @@
 # behaviortrees
-##COMP 131: Artificial Intelligence
-##Homework 1: Behavior Trees
+## COMP 131: Artificial Intelligence
+## Homework 1: Behavior Trees
 
 
 
 # README
 
-##Assignment: HW4
+## Assignment: HW4
 
-###Author(s): Caroline Vanderlee and Brandon Bell
+### Author(s): Caroline Vanderlee and Brandon Bell
 
 
-###CODE DETAILS
+### CODE DETAILS
 
-	####IMPLEMENTATION
+	#### IMPLEMENTATION
 
 		We expect that our solution has been completely and correctly
 		implemented.
 
-	####ARCHITECTURE:
+	#### ARCHITECTURE:
