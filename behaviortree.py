@@ -3,7 +3,7 @@
 import time
 import sys
 
-# Blackboard: Brandon, Caroline has started for testing
+# Blackboard
 class blackboard:
     BATTERY_LEVEL = 0
     SPOT = False
@@ -19,19 +19,30 @@ class blackboard:
         self.HOME_PATH = h_val
 
 
-# Battery Functions: Caroline
-# Roomba will always check battery first, then call cleaning function
+# Initial battery check
+# Roomba will check battery first, then call cleaning function
 def battery_check(blackboard):
     if blackboard.BATTERY_LEVEL < 30:
         go_home(blackboard)
-
     # Cleaning begins once charge is sufficient
     cleaning_function(blackboard)
     return;
 
 
-# Battery charge function
-# Called within go_home, after roomba has found home and docked
+# Go home
+def go_home(blackboard):
+    if blackboard.HOME_PATH:
+        dock(blackboard)
+    return;
+
+
+# Dock
+def dock(blackboard):
+    battery_charge(blackboard)
+    return;
+
+
+# Battery charge
 def battery_charge(blackboard):
     i = blackboard.BATTERY_LEVEL
     for j in range(i,100):
@@ -41,20 +52,7 @@ def battery_charge(blackboard):
     return;
 
 
-# Go Home: Brandon
-def go_home(blackboard):
-    if blackboard.HOME_PATH:
-        dock(blackboard)
-    return;
-
-
-# Dock: Brandon
-def dock(blackboard):
-    battery_charge(blackboard)
-    return;
-
-
-# Cleaning Function: Caroline
+# Cleaning Function
 def cleaning_function(blackboard):
     if blackboard.SPOT == False and blackboard.GENERAL == False:
         print "SUCCEEDED"
@@ -65,7 +63,7 @@ def cleaning_function(blackboard):
             spot_check(blackboard, 20)
             print "SUCCEEDED"
 
-        # Run general clean: while loop for repetitive clean
+        # General clean runs after spot clean; while loop for repetition
         while blackboard.GENERAL == True:
             # Manually check battery level and charge if needed
             if blackboard.BATTERY_LEVEL < 30:
@@ -82,7 +80,8 @@ def cleaning_function(blackboard):
         # End while loop
     return;
 
-# Spot Check: Both
+
+# Spot Check
 def spot_check(blackboard, secs):
     print "RUNNING"
     # Delay: flush printed output
@@ -97,15 +96,19 @@ def spot_check(blackboard, secs):
     battery_deplete(blackboard, secs)
     return;
 
-# Return general clean complete
-def complete(blackboard):
-    blackboard.GENERAL = False
-    return;
 
 # Battery depletion
 def battery_deplete(blackboard, val):
     blackboard.BATTERY_LEVEL = blackboard.BATTERY_LEVEL - val
     return;
+
+
+# Return general clean complete
+def complete(blackboard):
+    blackboard.GENERAL = False
+    return;
+
+
 
 # Tests
 
