@@ -22,16 +22,10 @@ class blackboard:
 # Battery Functions: Caroline
 # Roomba will always check battery first, then call cleaning function
 def battery_check(blackboard):
-    print "Battery level is " + str(blackboard.BATTERY_LEVEL)
-
     if blackboard.BATTERY_LEVEL < 30:
-        print "Needs charging"
         go_home(blackboard)
-        print "Battery level " +  str(blackboard.BATTERY_LEVEL) + "% sufficient"
-    else:
-        print "Charge sufficient to begin cleaning"
 
-    # Cleaning begins once charge is sufficient in both cases
+    # Cleaning begins once charge is sufficient
     cleaning_function(blackboard)
     return;
 
@@ -39,78 +33,59 @@ def battery_check(blackboard):
 # Battery charge function
 # Called within go_home, after roomba has found home and docked
 def battery_charge(blackboard):
-    print "Beginning charging process"
     i = blackboard.BATTERY_LEVEL
     for j in range(i,100):
         blackboard.BATTERY_LEVEL = j + 1
-        # Delay; flush printed output for testing purposes
-        sys.stdout.flush()
+        # Delay
         time.sleep(0.1)
-        print "Charging: " + str(blackboard.BATTERY_LEVEL) + "%"
-    print "Fully charged at " + str(blackboard.BATTERY_LEVEL) + "%"
     return;
 
 
 # Go Home: Brandon
 def go_home(blackboard):
-    print "Go Home Start"
     if blackboard.HOME_PATH:
-        print "Navigating to home location at " + str(blackboard.HOME_PATH)
         dock(blackboard)
     return;
 
 
 # Dock: Brandon
 def dock(blackboard):
-        battery_charge(blackboard)
-        return;
+    battery_charge(blackboard)
+    return;
 
 
 # Cleaning Function: Caroline
 def cleaning_function(blackboard):
-    print "Checking for cleaning"
     if blackboard.SPOT == False and blackboard.GENERAL == False:
-        print "No cleaning command requested"
+        print "SUCCEEDED"
     else:
-        print "A clean has been requested"
-
         # Run spot check first
         if blackboard.SPOT == True:
-            print "A spot check has been requested"
             # Spot cleaning: 20 second intensive
             spot_check(blackboard, 20)
-            print "Spot check completed: spot is " + str(blackboard.SPOT)
+            print "SUCCEEDED"
 
-        # Run general clean
-        print "Beginning general clean"
-
-        # While loop for repetitive clean
+        # Run general clean: while loop for repetitive clean
         while blackboard.GENERAL == True:
             # Manually check battery level and charge if needed
             if blackboard.BATTERY_LEVEL < 30:
-                print "Needs charging"
                 go_home(blackboard)
-                print "Battery level " +  str(blackboard.BATTERY_LEVEL) + "% sufficient"
             # Check for dusty spot
             if blackboard.DUSTY_SPOT == True:
-                print "Dusty spot detected"
                 # Dusty spot: 35 second intensive
                 spot_check(blackboard, 35)
-                print "Intensive cleaning completed: Dusty spot " + str(blackboard.DUSTY_SPOT)
             # Check if everything is clean
             if blackboard.DUSTY_SPOT == False:
                 # Done with general cleaning
                 complete(blackboard)
+                print "SUCCEEDED"
         # End while loop
-
-        print "General clean completed"
-        print "Battery at " + str(blackboard.BATTERY_LEVEL)
     return;
 
 # Spot Check: Both
 def spot_check(blackboard, secs):
-    print "Running spot check: " + str(secs) + " seconds"
-    # Flush printed output
+    print "RUNNING"
+    # Delay: flush printed output
     sys.stdout.flush()
     time.sleep(secs)
     # 20 seconds for normal spot check, else 35 seconds for dusty spot
