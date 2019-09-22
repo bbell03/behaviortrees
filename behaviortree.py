@@ -158,7 +158,10 @@ def complete(blackboard):
 # print "\nTEST TWELVE: 10% battery, recharging"
 # b_twelve = blackboard(10, True, True, True, 1)
 # battery_charge(b_twelve)
+#
+# print "\nTEST THIRTEEN: 30% battery, general / spot / dusty commands"
+# b_thirteen = blackboard(30, True, True, True, 1)
+# battery_check(b_thirteen)
+#
 
-print "\nTEST THIRTEEN: 30% battery, general / spot / dusty commands"
-b_thirteen = blackboard(30, True, True, True, 1)
-battery_check(b_thirteen)
+# User Input
