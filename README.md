@@ -3,6 +3,8 @@
 ###### Homework 1: Behavior Trees
 ###### Tufts University
 
+Please note that this project does not run on an actual Romba robot and
+is made strictly for academic purposes
 
 # README
 
