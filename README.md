@@ -15,8 +15,8 @@
     We expect that our solution has been completely and correctly implemented.
 
   #### ARCHITECTURE:
-    Our solution makes use of modularity and object oriented design to program
-    the various functions of a Rommba robot.
+    Our solution makes use of modularity and object oriented design to
+    implement the various functions of a Rommba robot.
 
     All functions take a blackboard object as input complete with attributes
     which correspond to those of the Roomba robot:
