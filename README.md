@@ -17,13 +17,14 @@ IMPLEMENTATION:
 ARCHITECTURE:
   Our solution makes use of modularity and object oriented design to program various functions on a Roomba.
 
-  All functions take a blackboard object complete with the
-  following attributes:
+  All functions take a blackboard object as input complete with attributes which correspond to those of the Roomba robot:
     BATTERY_LEVEL,
     SPOT,
     GENERAL,
     DUSTY_SPOT,
     HOME_PATH,
+
+  This object is parsed on program start, and its attributes are used heavily in functions throughout throughout.
 
   Function(s) Implemented Include:
     battery_check,
