@@ -19,20 +19,18 @@ ARCHITECTURE:
 
   All functions take a blackboard object complete with the
   following attributes:
-    BATTERY_LEVEL
-    SPOT
-    GENERAL
-    DUSTY_SPOT
-    HOME_PATH
+    BATTERY_LEVEL,
+    SPOT,
+    GENERAL,
+    DUSTY_SPOT,
+    HOME_PATH,
 
   Function(s) Implemented Include:
-    battery_check
-    go_home
-    dock
-    battery_charge
-    cleaning_function
-    spot_check
-    battery_deplete
-    complete
-
-    
+    battery_check,
+    go_home,
+    dock,
+    battery_charge,
+    cleaning_function,
+    spot_check,
+    battery_deplete,
+    complete,
