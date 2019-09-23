@@ -27,7 +27,7 @@
       * HOME_PATH,
 
     This object is parsed on program start, and its attributes are used heavily
-    in functions throughout throughout.
+    in functions throughout.
 
   #### Function(s) Implemented Include:
     * battery_check,
