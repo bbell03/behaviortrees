@@ -15,16 +15,19 @@
     We expect that our solution has been completely and correctly implemented.
 
   #### ARCHITECTURE:
-    Our solution makes use of modularity and object oriented design to program various functions on a Roomba.
+    Our solution makes use of modularity and object oriented design to program
+    the various functions of a Rommba robot.
 
-    All functions take a blackboard object as input complete with attributes which correspond to those of the Roomba robot:
+    All functions take a blackboard object as input complete with attributes
+    which correspond to those of the Roomba robot:
       * BATTERY_LEVEL,
       * SPOT,
       * GENERAL,
       * DUSTY_SPOT,
       * HOME_PATH,
 
-    This object is parsed on program start, and its attributes are used heavily in functions throughout throughout.
+    This object is parsed on program start, and its attributes are used heavily
+    in functions throughout throughout.
 
   #### Function(s) Implemented Include:
     * battery_check,
