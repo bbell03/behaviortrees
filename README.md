@@ -78,7 +78,7 @@
     Our program is implemented according to the behavior tree
     diagram present in the homework specification found at
     https://canvas.tufts.edu/courses/9172/assignments/55650
-    In our implementation, the battery_check part of the tree is handled
-    by the battery_check function and the functions it calls while the cleaning
-    portion of the tree is handled by the cleaning_function and those that
-    it calls
+    In our implementation, the battery_check portion of the tree is handled
+    by the battery_check function and relevant functions within its body
+    while the cleaning portion of the tree is handled by the cleaning_function
+    and those functions which it implicitly calls.
