@@ -65,10 +65,15 @@
       * outputs: none
       * functionality: prints message "RUNNING", flushes the system, and
     * battery_deplete,
-      * inputs: blackboard object and a value representing the amount of total battery missing.
+      * inputs: blackboard object and a value representing the amount of total
+      battery missing.
       * outputs: none
       * functionality: Updates BATTERY_LEVEL attribute as battery depletes
     * complete
       * inputs: blackboard object
       * outputs: none
       * functionality: Sets the value of GENERAL to FALSE on clean complete
+
+  #### Methodology: Our program is implemented according to the behavior tree
+  diagram present in the homework specification found at
+  https://canvas.tufts.edu/courses/9172/assignments/55650
