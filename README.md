@@ -61,7 +61,14 @@
       TRUE the program executes general cleaning procedure, making calls to
       functions go_home, spot_check, and complete
     * spot_check,
-      * inputs:
-      * outputs:
-      * functionality:
+      * inputs: blackboard objects, secs
+      * outputs: none
+      * functionality: prints message "RUNNING", flushes the system, and
     * battery_deplete,
+      * inputs: blackboard object and a value representing the amount of total battery missing.
+      * outputs: none
+      * functionality: Updates BATTERY_LEVEL attribute as battery depletes
+    * complete
+      * inputs: blackboard object
+      * outputs: none
+      * functionality: Sets the value of GENERAL to FALSE on clean complete
