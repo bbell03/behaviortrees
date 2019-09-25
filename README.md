@@ -56,10 +56,3 @@
       * outputs:
       * functionality:
     * battery_deplete,
-      * inputs:
-      * outputs:
-      * functionality:
-    * complete,
-      * inputs:
-      * outputs:
-      * functionality:
