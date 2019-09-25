@@ -33,12 +33,14 @@ def battery_check(blackboard):
 # Go home
 def go_home(blackboard):
     if blackboard.HOME_PATH:
+        //method to find home unspecified... would go here.
         dock(blackboard)
     return;
 
 
 # Dock
 def dock(blackboard):
+    //method to dock unspecified, would go here.
     battery_charge(blackboard)
     return;
 
