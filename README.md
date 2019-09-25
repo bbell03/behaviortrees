@@ -30,7 +30,7 @@
     This object is parsed on program start, and its attributes are used heavily
     in functions throughout.
 
-  #### Function(s) Implemented Include:
+  #### FUNCTION(S) IMPLEMENTED INCLUDE:
     * battery_check,
       * inputs: blackboard object
       * outputs: none
@@ -74,7 +74,7 @@
       * outputs: none
       * functionality: Sets the value of GENERAL to FALSE on clean complete
 
-  #### Methodology:
+  #### METHODOLOGY:
     Our program is implemented according to the behavior tree
     diagram present in the homework specification found at
     https://canvas.tufts.edu/courses/9172/assignments/55650
