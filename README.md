@@ -54,7 +54,12 @@
     * cleaning_function,
       * inputs: blackboard object
       * outputs: none
-      * functionality: Encompasses major functionality of this program -- First checks for SPOT == FALSE, and GENERAL == FALSE to evaluate whether cleaning is even necessary. If no clean is necessary the function prints succeeded and returns. Otherwise, when SPOT == TRUE and while GENERAL == TRUE the program executes general cleaning procedure, making calls to functions go_home, spot_check, and complete
+      * functionality: Encompasses major functionality of this program --
+      First checks for SPOT == FALSE, and GENERAL == FALSE to evaluate whether
+      cleaning is even necessary. If no clean is necessary the function prints
+      succeeded and returns. Otherwise, when SPOT == TRUE and while GENERAL ==
+      TRUE the program executes general cleaning procedure, making calls to
+      functions go_home, spot_check, and complete
     * spot_check,
       * inputs:
       * outputs:
