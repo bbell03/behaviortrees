@@ -34,11 +34,14 @@
     * battery_check,
       * inputs: blackboard object
       * outputs: none
-      * functionality: Checks if the BATTERY_LEVEL attribute of blackboard is less than 30 and if so calls go_home, and in any case, subsequently calls the cleaning_function
+      * functionality: Checks if the BATTERY_LEVEL attribute of blackboard
+      is less than 30 and if so calls go_home, and in any case, subsequently
+      calls the cleaning_function
     * go_home,
       * inputs: blackboard object
       * outputs: none
-      * functionality: If a HOME_PATH exists, the Roomba will navigate to its home location and subsequently call dock
+      * functionality: If a HOME_PATH exists, the Roomba will navigate to its
+      home location and subsequently call dock
     * dock,
       * inputs: blackboard object
       * outputs: none
@@ -46,7 +49,8 @@
     * battery_charge,
       * inputs: blackboard object
       * outputs: none
-      * functionality: Saves BATTERY_LEVEL blackboard attribute to a variable, and ensures that BATTERY_LEVEL is 100 before returning
+      * functionality: Saves BATTERY_LEVEL blackboard attribute to a variable,
+      and ensures that BATTERY_LEVEL is 100 before returning
     * cleaning_function,
       * inputs: blackboard object
       * outputs: none
