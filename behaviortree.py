@@ -33,14 +33,14 @@ def battery_check(blackboard):
 # Go home
 def go_home(blackboard):
     if blackboard.HOME_PATH:
-        //method to find home unspecified... would go here.
+        #method to find home unspecified... would go here.
         dock(blackboard)
     return;
 
 
 # Dock
 def dock(blackboard):
-    //method to dock unspecified, would go here.
+    #method to dock unspecified, would go here.
     battery_charge(blackboard)
     return;
 
@@ -168,7 +168,20 @@ def complete(blackboard):
 ### MAIN FLOW OF CONTROL ###
 
 # User Input: get inputs for battery?, spot, general, is the room dusty?
-b_user = blackboard(100, True, True, True, 1) # replace values with user input
+
+option = raw_input("Would you like to setup your Roomba with input values? enter (Y) otherwise a test will run: ")
+if option == "Y":
+    bat = raw_input("Please enter a battery level out of 100: ")
+    spot = raw_input("Please enter a SPOT boolean: ")
+    general = raw_input("Please enter a GENERAL boolean: ")
+    dusty_spot = raw_input("Please enter a DUSTY_SPOT boolean: ")
+    home_path = raw_input("Please Enter a HOME_PATH value: ")
+    b_user = blackboard(bat, spot, general, dusty_spot, home_path)
+
+else:
+    b_user = blackboard(100, True, True, True, 1) # replace values with user input
+
+
+battery_check(blackboard)
 
 # Battery check will launch the whole program
-battery_check(b_user)
