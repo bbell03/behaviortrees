@@ -63,7 +63,7 @@
     * spot_check,
       * inputs: blackboard objects, secs
       * outputs: none
-      * functionality: prints message "RUNNING", flushes the system, and
+      * functionality: prints message "RUNNING", flushes the system, and runs processes according to a time conditional -- cleans if secs == 20 the program executes a normal clean otherwise it executes a deep clean
     * battery_deplete,
       * inputs: blackboard object and a value representing the amount of total
       battery missing.
