@@ -27,6 +27,11 @@
       * DUSTY_SPOT,
       * HOME_PATH,
 
+    This program gives the option for user input to populate the attribtues of
+    the blackboard object.
+
+    Otherwise, it populates blackboard with default test values and then begins roomba procedure.
+    
     This object is parsed on program start, and its attributes are used heavily
     in functions throughout.
 
