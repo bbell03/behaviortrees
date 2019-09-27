@@ -169,19 +169,18 @@ def complete(blackboard):
 
 # User Input: get inputs for battery?, spot, general, is the room dusty?
 
-option = raw_input("Would you like to setup your Roomba with input values? enter (Y) otherwise a test will run: ")
+option = raw_input("Would you like to setup your Roomba with input values? if so enter (Y) otherwise a test will run: ")
 if option == "Y":
-    bat = raw_input("Please enter a battery level out of 100: ")
-    spot = raw_input("Please enter a SPOT boolean: ")
-    general = raw_input("Please enter a GENERAL boolean: ")
-    dusty_spot = raw_input("Please enter a DUSTY_SPOT boolean: ")
-    home_path = raw_input("Please Enter a HOME_PATH value: ")
+    bat = int(input("Please enter a battery level out of 100: "))
+    spot = bool(int(input("Please enter a SPOT boolean: ")))
+    general = bool(int(input("Please enter a GENERAL boolean: ")))
+    dusty_spot = bool(int(input("Please enter a DUSTY_SPOT boolean: ")))
+    home_path = int(input("Please Enter a HOME_PATH value: "))
     b_user = blackboard(bat, spot, general, dusty_spot, home_path)
 
 else:
     b_user = blackboard(100, True, True, True, 1) # replace values with user input
 
-
-battery_check(blackboard)
+battery_check(b_user)
 
 # Battery check will launch the whole program
