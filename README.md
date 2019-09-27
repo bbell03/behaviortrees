@@ -31,7 +31,7 @@
     the blackboard object.
 
     Otherwise, it populates blackboard with default test values and then begins roomba procedure.
-    
+
     This object is parsed on program start, and its attributes are used heavily
     in functions throughout.
 
@@ -88,4 +88,4 @@
     In our implementation, the battery_check portion of the tree is handled
     by the battery_check function and relevant functions within its body
     while the cleaning portion of the tree is handled by the cleaning_function
-    and those functions which it implicitly calls.
+    and those functions which it calls.
