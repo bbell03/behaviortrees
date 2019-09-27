@@ -3,7 +3,7 @@
 ###### Homework 1: Behavior Trees
 ###### Tufts University
 
-###### Please note that this project does not run on an actual Romba robot and was made strictly for academic purposes.
+###### Please note that this project does not run on an actual Roomba robot and was made strictly for academic purposes.
 
 # README
 
@@ -14,10 +14,11 @@
 
   #### IMPLEMENTATION:
     We expect that our solution has been completely and correctly implemented.
+    This code was written in Python 2.7.8.
 
   #### ARCHITECTURE:
     Our solution makes use of modularity and object oriented design to
-    implement the various functions of a Rommba robot.
+    implement the various functions of a Roomba robot.
 
     All functions take a blackboard object as input complete with attributes
     which correspond to those of the Roomba robot:
